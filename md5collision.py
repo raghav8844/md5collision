@@ -2,7 +2,7 @@ from hashlib import md5
 from itertools import combinations_with_replacement
 import string
 
-start = '0e'
+startingbytes = '0e'
 
 for i in range(1,25):
 
@@ -15,6 +15,6 @@ for i in range(1,25):
         then_hash = m.hexdigest()
 
         if then_hash[:2] == start and then_hash[2:].isnumeric():
-            print("WE GOT IT")
+            print("COLLISON HASHES")
             print(f"{to_hash} -> {then_hash}")
             exit()
